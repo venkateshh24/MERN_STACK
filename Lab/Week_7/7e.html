@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>String Object Demo</title>
+</head>
+<body>
+  <script>
+    document.write("<h2>String Object Demonstration</h2>");
+
+    let str = " JavaScript Programming ";
+    document.write("<h3>String Properties</h3>");
+    document.write("Original String: '" + str + "'<br>");
+    document.write("Length Property: " + str.length + "<br><br>");
+
+    document.write("<h3>String Methods</h3>");
+
+    document.write("charAt(5): " + str.charAt(5) + "<br>");
+
+    document.write("charCodeAt(5): " + str.charCodeAt(5) + "<br>");
+
+    document.write("at(-1): " + str.at(-1) + "<br>");
+
+    document.write("toUpperCase(): " + str.toUpperCase() + "<br>");
+
+    document.write("toLowerCase(): " + str.toLowerCase() + "<br>");
+
+    document.write("trim(): '" + str.trim() + "'<br>");
+
+    document.write("trimStart(): '" + str.trimStart() + "'<br>");
+
+    document.write("trimEnd(): '" + str.trimEnd() + "'<br>");
+
+    let str2 = " is Fun!";
+    document.write("concat(str2): " + str.concat(str2) + "<br>");
+
+    document.write("slice(1,10): " + str.slice(1, 10) + "<br>");
+
+    document.write("substring(1,10): " + str.substring(1, 10) + "<br>");
+
+    document.write("substr(1,10): " + str.substr(1, 10) + "<br>");
+
+    document.write("indexOf('Script'): " + str.indexOf("Script") + "<br>");
+
+    document.write("lastIndexOf('a'): " + str.lastIndexOf("a") + "<br>");
+
+    document.write("includes('Program'): " + str.includes("Program") + "<br>");
+
+    document.write("startsWith(' Java'): " + str.startsWith(" Java") + "<br>");
+
+    document.write("endsWith('ing '): " + str.endsWith("ing ") + "<br>");
+
+    document.write("replace('JavaScript','JS'): " + str.replace("JavaScript", "JS") + "<br>");
+
+    let str3 = "aaa bbb aaa";
+    document.write("replaceAll('aaa','xxx'): " + str3.replaceAll("aaa","xxx") + "<br>");
+
+    document.write("split(' '): " + str.split(" ") + "<br>");
+
+    document.write("repeat(2): " + str.trim().repeat(2) + "<br>");
+  </script>
+</body>
+</html>

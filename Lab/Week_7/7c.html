@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Array Methods Demo</title>
+</head>
+<body>
+  <script>
+    let arr = [10, 20, 30, 40, 50];
+
+    
+    document.write("Original Array: " + arr + "<br>");
+    
+    document.write("Array length property: " + arr.length + "<br><br>");
+
+    // 1. push()
+    arr.push(60);
+    document.write("After push(60): " + arr + "<br>");
+
+    // 2. pop()
+    arr.pop();
+    document.write("After pop(): " + arr + "<br>");
+
+    // 3. unshift()
+    arr.unshift(5);
+    document.write("After unshift(5): " + arr + "<br>");
+
+    // 4. shift()
+    arr.shift();
+    document.write("After shift(): " + arr + "<br>");
+
+    // 5. concat()
+    let more = [70, 80];
+    let combined = arr.concat(more);
+    document.write("After concat([70,80]): " + combined + "<br>");
+
+    // 6. slice()
+    let sliced = arr.slice(1, 3);
+    document.write("slice(1,3): " + sliced + "<br>");
+
+    // 7. splice()
+    arr.splice(2, 1, 99, 100);
+    document.write("After splice(2,1,99,100): " + arr + "<br>");
+
+    // 8. indexOf()
+    document.write("indexOf(99): " + arr.indexOf(99) + "<br>");
+
+    // 9. lastIndexOf()
+    arr.push(20);
+    document.write("lastIndexOf(20): " + arr.lastIndexOf(20) + "<br>");
+
+    // 10. includes()
+    document.write("includes(30): " + arr.includes(30) + "<br>");
+
+    // 11. forEach()
+    document.write("forEach():<br>");
+    arr.forEach((val, i) => {
+      document.write("Index " + i + " => " + val + "<br>");
+    });
+
+    // 12. map()
+    let doubled = arr.map(x => x * 2);
+    document.write("map(x*2): " + doubled + "<br>");
+
+    // 13. filter()
+    let greaterThan30 = arr.filter(x => x > 30);
+    document.write("filter(x>30): " + greaterThan30 + "<br>");
+
+    // 14. reduce()
+    let sum = arr.reduce((acc, val) => acc + val, 0);
+    document.write("reduce(sum): " + sum + "<br>");
+
+    // 15. sort()
+    let sorted = arr.slice().sort((a, b) => a - b);
+    document.write("Sorted array: " + sorted + "<br>");
+
+    // reverse()
+    document.write("Reversed array: " + arr.slice().reverse() + "<br>");
+  </script>
+</body>
+</html>

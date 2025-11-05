@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>RegExp Object Demo</title>
+</head>
+<body>
+  <script>
+    document.write("<h2>RegExp Object Demonstration</h2>");
+
+    let str = "JavaScript is fun. javascript is powerful. JS rocks!";
+    let regex = /javascript/gi; // g=global, i=ignoreCase
+
+    document.write("<h3>Properties</h3>");
+    document.write("Pattern source: " + regex.source + "<br>");
+    document.write("Global flag: " + regex.global + "<br>");
+    document.write("IgnoreCase flag: " + regex.ignoreCase + "<br>");
+    document.write("Multiline flag: " + regex.multiline + "<br>");
+    document.write("DotAll flag: " + regex.dotAll + "<br>");
+    document.write("Unicode flag: " + regex.unicode + "<br>");
+    document.write("Sticky flag: " + regex.sticky + "<br><br>");
+
+    document.write("<h3>Methods</h3>");
+
+    document.write("test(): " + regex.test(str) + "<br>");
+
+    let execResult = regex.exec(str);
+    document.write("exec(): " + execResult[0] + " at index " + execResult.index + "<br>");
+
+    let matchResult = str.match(regex);
+    document.write("match(): " + matchResult + "<br>");
+
+    let allMatches = [...str.matchAll(regex)];
+    document.write("matchAll(): " + allMatches.map(m => m[0]) + "<br>");
+
+    document.write("search(): " + str.search(/fun/) + "<br>");
+
+    document.write("replace(): " + str.replace(/JavaScript/i, "JS") + "<br>");
+
+    document.write("replaceAll(): " + str.replaceAll(/javascript/gi, "JS") + "<br>");
+
+    let splitResult = str.split(/\s+/);
+    document.write("split(): " + splitResult + "<br>");
+
+    document.write("toString(): " + regex.toString() + "<br>");
+
+    document.write("^ anchor test: " + /^Java/.test(str) + "<br>");
+
+    document.write("$ anchor test: " + /rocks!$/.test(str) + "<br>");
+
+    document.write("\\d test: " + /\d+/.test("123abc") + "<br>");
+
+    document.write("Word boundary test: " + /\bfun\b/.test(str) + "<br>");
+
+    document.write("Quantifier test (+): " + /a+/.test("caaaars") + "<br>");
+
+    document.write("Character class test [Jj]: " + /[Jj]S/.test(str) + "<br>");
+  </script>
+</body>
+</html>

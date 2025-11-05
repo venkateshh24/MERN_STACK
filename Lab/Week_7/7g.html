@@ -1,0 +1,71 @@
+<html>
+<head>
+  <title>Date Object Demo</title>
+</head>
+<body>
+  <script>    
+    let now = new Date(); // current date & time
+    let specificDate = new Date("2025-09-03T08:30:00");
+
+    document.write("<h3>Original Dates</h3>");
+    document.write("Current Date: " + now + "<br>");
+    document.write("Specific Date: " + specificDate + "<br><br>");
+
+
+    document.write("getFullYear(): " + now.getFullYear() + "<br>");
+
+    document.write("getMonth(): " + now.getMonth() + " (0=Jan)<br>");
+
+    document.write("getDate(): " + now.getDate() + "<br>");
+
+    document.write("getDay(): " + now.getDay() + "<br>");
+
+    document.write("getHours(): " + now.getHours() + "<br>");
+
+    document.write("getMinutes(): " + now.getMinutes() + "<br>");
+
+    document.write("getSeconds(): " + now.getSeconds() + "<br>");
+
+    document.write("getMilliseconds(): " + now.getMilliseconds() + "<br>");
+
+    document.write("getTime(): " + now.getTime() + "<br>");
+
+    document.write("getTimezoneOffset(): " + now.getTimezoneOffset() + " minutes<br>");
+
+    let temp1 = new Date(now);
+    temp1.setFullYear(2030);
+    document.write("setFullYear(2030): " + temp1 + "<br>");
+
+    let temp2 = new Date(now);
+    temp2.setMonth(11); // December
+    document.write("setMonth(11): " + temp2 + "<br>");
+
+    let temp3 = new Date(now);
+    temp3.setDate(15);
+    document.write("setDate(15): " + temp3 + "<br>");
+
+    let temp4 = new Date(now);
+    temp4.setHours(20);
+    document.write("setHours(20): " + temp4 + "<br>");
+
+    let temp5 = new Date(now);
+    temp5.setMinutes(45);
+    document.write("setMinutes(45): " + temp5 + "<br>");
+
+    let temp6 = new Date(now);
+    temp6.setSeconds(59);
+    document.write("setSeconds(59): " + temp6 + "<br>");
+
+    document.write("toDateString(): " + now.toDateString() + "<br>");
+
+    document.write("toTimeString(): " + now.toTimeString() + "<br>");
+
+    document.write("toLocaleDateString(): " + now.toLocaleDateString() + "<br>");
+
+    document.write("toLocaleTimeString(): " + now.toLocaleTimeString() + "<br>");
+
+    document.write("toISOString(): " + now.toISOString() + "<br>");
+
+  </script>
+</body>
+</html>

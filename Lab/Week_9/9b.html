@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>Fib And Fact</title>
+        <script>
+            function Fib(prev1,prev2,n){
+                let cur = prev1 + prev2;
+                if(cur > n)return;
+                document.write(cur + "<br>");
+                Fib(prev2,cur,n);
+            }
+            function AskFibInput(){
+                let n = Number(prompt("Enter Value of N"));
+                document.write(0 + "<br>" + 1 + "<br>");
+                Fib(0,1,n);
+            }
+            function Fact(n){
+                if(n == 1)return n;
+                return n * Fact(n - 1);
+            }
+            function AskFactInput(){
+                let a = Number(prompt("Enter Value of N"));
+                document.write(Fact(a));
+            }
+        </script>
+    </head>
+    <body>
+        <input type="button" value="Factorial" onclick="AskFactInput();">
+        <br>
+        <br>
+        <input type="button" value="Fibonacci" onclick="AskFibInput();">
+    </body>
+</html>

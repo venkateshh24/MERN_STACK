@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>Different Types of LOOPS</title>
+    </head>
+    <body>
+        <script>
+            let dict = {name : "Gopi",age : "19",clg : "AUS"};
+
+            let arr = ["Gopi","Aditya","Venkat"];
+
+            let numbers = [10,20,30,40];
+
+            numbers.forEach((value,idx) => {
+                document.write(idx + " index has value " + value + "<br>");
+            });
+
+            for(let key in dict){
+                document.write(key + " : " + dict[key] + "<br>");
+            }
+
+            for(let name of arr){
+                document.write(name + "<br>");
+            }
+
+            
+        </script>
+    </body>
+</html>

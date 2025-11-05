@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>Conditional Statement</title>
+    </head>
+    <body>
+        <script>
+            let a = Number(prompt("Enter First Value"));
+            document.write(a + "<br>");
+            let b = Number(prompt("Enter Second Value"));
+            document.write(b + "<br>");
+            let c = Number(prompt("Enter Third Value"));
+            document.write(c + "<br>");
+            if(a == b && a == c){
+                document.write(" EQUAL NUMBERS" + "<br>");
+            }else if(a > b && a > c){
+                document.write(a + " LARGER NUMBER" + "<br>");
+            }else if(b > a && b > c){
+                document.write(b  + " LARGER NUMBER" + "<br>");
+            }else{
+                document.write(c + " LARGER NUMBER" + "<br>");
+            }
+        </script>
+    </body>
+</html>

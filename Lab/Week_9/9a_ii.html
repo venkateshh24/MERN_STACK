@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>Fibonacci Series</title>
+        <script>
+            function Fib(prev1,prev2,n){
+                let cur = prev1 + prev2;
+                if(cur > n)return;
+                document.write(cur + "<br>");
+                Fib(prev2,cur,n);
+            }
+            function AskInput(){
+                let n = Number(prompt("Enter Value of N"));
+                document.write(0 + "<br>" + 1 + "<br>");
+                Fib(0,1,n);
+            }
+        </script>
+    </head>
+    <body onload="AskInput();">
+        
+    </body>
+</html>
